@@ -284,12 +284,13 @@ if ($navpage == 'overview') {
 }
 
 // CENTER.
+    $course_fullname = format_string($course->fullname);
 echo '<div id="mentee-course-overview-center-single" class="block">'.
     '<div id="mentee-course-overview-center-menu-container">';
 echo '<div class="mentee-course-overview-center-course-title"><a  href="'.$CFG->wwwroot.'/course/view.php?id='.
     $course->id.'" onclick="window.open(\''.$CFG->wwwroot.'/course/view.php?id='.$course->id.
     '\', \'\', \'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,'.
-    'scrollbars=yes,resizable=yes\'); return false;" class="" >'.$course->fullname.'</a></div>';
+    'scrollbars=yes,resizable=yes\'); return false;" class="" >'.$course_fullname.'</a></div>';
 
 echo '<div class="mentee-course-overview-center-course-menu">
           <table class="mentee-menu">
